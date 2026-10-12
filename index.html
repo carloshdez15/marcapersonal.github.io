@@ -1,41 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera página web</title>
-    <link rel="stylesheet" href="./style.css">
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi primera página web</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
     
     <body>
-        <header>
+        <header class="header">
             <h1>Mi primer página web</h1>
-            <p>Bienvenido a mi sitio</p>
+            <p class="subtitulo">Bienvenido a mi sitio</p>
+
+            
+            <label id="btn-tema" class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
         </header>
 
-        <nav>
+        <nav class="menu">
             <a href="#sobre-mi">Sobre mí</a>
             <a href="#proyectos">Mis proyectos</a>
+            <a href="#habilidades">Habilidades</a>
             <a href="https://www.google.com">Google</a>
         </nav>
 
 
-        <section id="sobre-mi">
-            <h2>Sobre mí</h2>
-            <img src="./img/yo.jpg" alt="Mi foto">
-            <p>Soy un estudiante de programación web</p>
-        </section>
+        <main>
 
-        <section id="proyectos">
-            <h2>Proyectos</h2>
-            <img src="./img/bici.jpg" alt="Compitiendo">
-            <p>Estos son mis últimos proyectos</p>
-        </section>
+            <section id="sobre-mi" class="seccion">
+                <h2>Sobre mí</h2>
+                <div class="sobre-mi-contenido">
+                    <img src="./img/yo.jpg" alt="Mi foto">
+                    <div class="texto">
+                        <p>Soy un estudiante de programación web</p>
 
 
-        <footer>
-            <p>Mi página web</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section id="proyectos" class="seccion">
+                <h2>Proyectos</h2>
+                <div class="cards">
+                    
+                    <div class="proyecto-card">
+                        <img src="./img/bici.jpg" alt="Compitiendo">
+                        <p>Estos son mis últimos proyectos</p>
+                    </div>
+
+                    <div class="proyecto-card">
+                        <img src="./img/bici.jpg" alt="Compitiendo">
+                        <p>Estos son mis últimos proyectos</p>
+                    </div>   
+
+                    <div class="proyecto-card">
+                        <img src="./img/bici.jpg" alt="Compitiendo">
+                        <p>Estos son mis últimos proyectos</p>
+                    </div>   
+
+
+                </div>
+               
+            </section>
+
+            
+
+
+
+            <section id="habilidades" class="seccion">
+                <h2>Habilidades</h2>
+                <div class="habilidades-grid">
+                    <div class="habilidad">HTML</div>
+                    <div class="habilidad">CSS</div>
+                    <div class="habilidad">JavaScript</div>
+                    <div class="habilidad">Python</div>
+                    <div class="habilidad">Java</div>
+                    <div class="habilidad">Robotica</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Mi página web &copy; 2026 | Carlos Hernández</p>
         </footer>
 
 
