@@ -1,32 +1,166 @@
+/* Selector universal */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
+    color: black;
 }
 
-header{
+
+/* Header */
+
+.header{
     text-align: center;
-    padding: 40px;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, rgb(112,104,104), rgb(189,180,180));
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: white;
 }
+
+
+.header h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+
+.subtitulo{
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+
+/* Nav */
 
 nav{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
     padding: 15px;
+    background-color: rgb(68,90,109);
+    flex-wrap: wrap;
 }
+
 
 nav a{
     text-decoration: none;
-    margin: 25px;
-    color: black;
+    color: white;
     font-size: 18px;
+    padding: 8px 16px;
+    transition: color 0.3s;
 }
+
+
 nav a:hover{
     color: dimgray; 
 }
 
-section{
-    text-align: center;
-    padding: 40px;
+
+/* Secciones */
+
+.seccion{
+    padding: 50px 20px;
+    max-width: 70%;
+    margin: 0 auto;
 }
+
+
+.seccion h2{
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: rgb(68,90,109);
+}
+
+
+/* Sobre mi */
+
+.sobre-mi-contenido{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+
+
+.sobre-mi-contenido img{
+    width: 25%;
+    object-fit: center;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.texto{
+    max-width: 50%;
+    text-align: justify;
+}
+
+
+/* Proyectos */
+
+.proyecto-card{
+    text-align: center;
+    background-color: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    max-width: 33%;
+    margin: 0 auto;    
+}
+
+
+.proyecto-card img{
+    width: 100%;
+    height: 70%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+.cards{
+    display: flex;
+    gap: 20px;
+}
+
+
+/* Habilidades */
+
+.habilidades-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 100%;
+    margin: 0;
+}
+
+
+.habilidad{
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+
+.habilidad:hover{
+    transform: translateY(-5px);
+    background-color: aquamarine;
+}
+
+
+/* Footer */
 
 footer{
     text-align: center;
@@ -40,6 +174,112 @@ img{
     width: 20%;
     border-radius: 10%;
 }
+
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* Modo oscuro */
+
+body.oscuro{
+    background-color: rgb(7,4,59);
+    color: lightgray;
+}
+
+
+body.oscuro .header{
+    background-color: linear-gradient(135deg, #0f3460, #1a1a2e);
+}
+
+
+body.oscuro nav{
+    background-color: #0f3460;
+}
+
+
+body.oscuro .seccion h2{
+    color: lightcoral;
+}
+
+
+body.oscuro .proyecto-card{
+    background-color: #16213e;
+    color: lightgray;
+}
+
+
+body.oscuro .habilidad{
+    background-color: #0f3460;
+}
+
+body.oscuro footer{
+    background-color: #0f3460;
+}
+
+
 
 @media (max-width: 600px){
 
